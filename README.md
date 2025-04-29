@@ -1,2 +1,2 @@
 # ITEvent
-Alicacion movial para gestion de eventos de TECNM
+Aplicacion movial para gestion de eventos de TECNM
