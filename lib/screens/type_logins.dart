@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'screens/type_logins.dart';
+import 'admin/main.dart';
+import 'login.dart';
 
 void main() {
   runApp(const ITEventApp());
@@ -12,15 +13,15 @@ class ITEventApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ITEvent',
+      title: 'WhoLogin',
       debugShowCheckedModeBanner: false,
-      home: const WelcomePage(),
+      home: const TypeLogin(),
     );
   }
 }
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class TypeLogin extends StatelessWidget {
+  const TypeLogin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,11 +59,10 @@ class WelcomePage extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Aquí iría la navegación a la pantalla de login
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const TypeLogin(),
+                          builder: (context) => const EventScreen(),
                         ),
                       );
                     },
@@ -70,19 +70,56 @@ class WelcomePage extends StatelessWidget {
                       backgroundColor: Colors.indigo,
                       minimumSize: const Size(double.infinity, 50),
                     ),
-                    child: const Text('Iniciar Sesión'),
+                    child: const Text('Administrador'),
+                  ),
+                  const SizedBox(height: 15),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      minimumSize: const Size(double.infinity, 50),
+                    ),
+                    child: const Text('Conferencistas'),
+                  ),
+                  const SizedBox(height: 15),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      minimumSize: const Size(double.infinity, 50),
+                    ),
+                    child: const Text('Staff'),
                   ),
                   const SizedBox(height: 15),
                   OutlinedButton(
                     onPressed: () {
-                      // Aquí iría la navegación a la pantalla de registro
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
                     },
                     style: OutlinedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
                       side: const BorderSide(color: Colors.indigo),
                     ),
                     child: const Text(
-                      'Registrarme',
+                      'Invitado',
                       style: TextStyle(color: Colors.indigo),
                     ),
                   ),
