@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'asistentes.dart';
+import 'agenda.dart';
+// import 'asistentes.dart';
 import 'comunidad.dart';
 import 'main.dart';
 import 'mensajes.dart';
@@ -17,19 +18,19 @@ void navigateToPage(BuildContext context, int index) {
     case 1:
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const MensajesScreen()),
+        MaterialPageRoute(builder: (_) => AgendaUsuario()),
       );
       break;
     case 2:
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const AsistentesScreen()),
+        MaterialPageRoute(builder: (_) => const ComunidadScreen()),
       );
       break;
     case 3:
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const ComunidadScreen()),
+        MaterialPageRoute(builder: (_) => const MensajesScreen()),
       );
       break;
     case 4:
