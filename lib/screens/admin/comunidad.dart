@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'main_navigator.dart';
 import 'perfil.dart';
+import 'perfil_asistente.dart';
 
 class ComunidadScreen extends StatelessWidget {
   const ComunidadScreen({super.key});
@@ -112,7 +113,7 @@ class ComunidadScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3, // asistentes
+        currentIndex: 2, // asistentes
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         onTap: (index) => navigateToPage(context, index),
@@ -162,7 +163,10 @@ class PersonaCard extends StatelessWidget {
         isThreeLine: true,
         trailing: const Icon(Icons.chevron_right),
         onTap: () {
-          // Acción al dar tap
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PerfilUsuarioPage()),
+          );
         },
       ),
     );
