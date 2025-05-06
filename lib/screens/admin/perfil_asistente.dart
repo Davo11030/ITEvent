@@ -10,7 +10,7 @@ class PerfilUsuarioPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3, // asistentes
+        currentIndex: 2, // asistentes
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         onTap: (index) => navigateToPage(context, index),
