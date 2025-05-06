@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'package:lucide_icons/lucide_icons.dart'; // Opcional si usas más íconos
+import 'event_new.dart';
 import 'main_navigator.dart';
 import 'perfil.dart';
 
@@ -67,7 +67,10 @@ class _EventScreenState extends State<EventScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Acción para agregar evento
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const NuevoEventoScreen()),
+            );
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.indigo,
