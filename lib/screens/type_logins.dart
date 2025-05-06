@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'admin/main.dart';
 import 'login.dart';
+import 'users/main.dart';
 
 void main() {
   runApp(const ITEventApp());
@@ -110,7 +111,7 @@ class TypeLogin extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const LoginPage(),
+                          builder: (context) => const PantallaBienvenida(),
                         ),
                       );
                     },
