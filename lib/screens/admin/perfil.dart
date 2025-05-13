@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'main_navigator.dart';
+import 'modif_perfil.dart';
 
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({super.key});
@@ -88,7 +89,12 @@ class PerfilScreen extends StatelessWidget {
             ),
             trailing: IconButton(
               icon: const Icon(Icons.edit),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ModifPerfil()),
+                );
+              },
             ),
           ),
           const Padding(
