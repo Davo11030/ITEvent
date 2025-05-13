@@ -20,8 +20,6 @@ class ModifPerfil extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Encabezado con fondo azul y texto blanco
-          // Contenido scrollable
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
