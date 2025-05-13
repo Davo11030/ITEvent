@@ -27,17 +27,41 @@ class TypeLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: Center(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF162A87), // Azul oscuro
+              Colors.white, // Blanco abajo
+            ],
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'ITEvent',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                color: Colors.indigo,
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'ITE',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.yellow[700], // Amarillo
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'vent',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.indigo[900], // Azul oscuro
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 40),
@@ -71,7 +95,10 @@ class TypeLogin extends StatelessWidget {
                       backgroundColor: Colors.indigo,
                       minimumSize: const Size(double.infinity, 50),
                     ),
-                    child: const Text('Administrador'),
+                    child: const Text(
+                      'Administrador',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                   const SizedBox(height: 15),
                   ElevatedButton(
@@ -87,7 +114,10 @@ class TypeLogin extends StatelessWidget {
                       backgroundColor: Colors.indigo,
                       minimumSize: const Size(double.infinity, 50),
                     ),
-                    child: const Text('Conferencistas'),
+                    child: const Text(
+                      'Conferencistas',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                   const SizedBox(height: 15),
                   ElevatedButton(
@@ -103,7 +133,10 @@ class TypeLogin extends StatelessWidget {
                       backgroundColor: Colors.indigo,
                       minimumSize: const Size(double.infinity, 50),
                     ),
-                    child: const Text('Staff'),
+                    child: const Text(
+                      'Staff',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                   const SizedBox(height: 15),
                   OutlinedButton(

@@ -133,7 +133,7 @@ class PerfilScreen extends StatelessWidget {
           backgroundColor: const Color(0xFF3B5998),
         ),
         onPressed: () {},
-        child: Text(text),
+        child: Text(text, style: TextStyle(color: Colors.white)),
       ),
     );
   }

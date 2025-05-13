@@ -76,7 +76,10 @@ class _EventScreenState extends State<EventScreen> {
             backgroundColor: Colors.indigo,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           ),
-          child: const Text('Agregar eventos', style: TextStyle(fontSize: 16)),
+          child: const Text(
+            'Agregar eventos',
+            style: TextStyle(fontSize: 16, color: Colors.white),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

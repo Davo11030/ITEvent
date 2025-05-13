@@ -25,19 +25,44 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: Center(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF162A87), // Azul oscuro
+              Colors.white, // Blanco abajo
+            ],
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'ITEvent',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                color: Colors.indigo,
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'ITE',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.yellow[700], // Amarillo
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'vent',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.indigo[900], // Azul oscuro
+                    ),
+                  ),
+                ],
               ),
             ),
+
             const SizedBox(height: 40),
             Container(
               padding: const EdgeInsets.all(30),
@@ -70,7 +95,10 @@ class WelcomePage extends StatelessWidget {
                       backgroundColor: Colors.indigo,
                       minimumSize: const Size(double.infinity, 50),
                     ),
-                    child: const Text('Iniciar Sesión'),
+                    child: const Text(
+                      'Iniciar Sesión',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                   const SizedBox(height: 15),
                   OutlinedButton(
