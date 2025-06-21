@@ -38,11 +38,17 @@ class ModifPerfil extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // Campos de texto
-                  _buildTextField('Numero de telefono'),
                   _buildTextField('Numero de celular'),
                   _buildTextField('Correo'),
-                  _buildTextField('Direccion'),
+                  _buildTextField('Ciudad'),
+                  _buildTextField('Estado'),
+                  _buildTextField('Edad'),
                   _buildTextField('LinkedIn'),
+                  _buildTextField('Instagram'),
+                  _buildTextField('Facebook'),
+                  _buildTextField('TikTok'),
+                  _buildTextField('preséntate'),
+
 
                   const SizedBox(height: 30),
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/type_logins.dart';
 
+
 void main() {
   runApp(const ITEventApp());
 }
@@ -14,7 +15,7 @@ class ITEventApp extends StatelessWidget {
     return MaterialApp(
       title: 'ITEvent',
       debugShowCheckedModeBanner: false,
-      home: const WelcomePage(),
+       home: const WelcomePage(), 
     );
   }
 }

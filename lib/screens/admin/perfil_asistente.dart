@@ -103,7 +103,7 @@ class PerfilUsuarioPage extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 SizedBox(height: 8),
-                Text('Escribe Notas'),
+                Text('Presentación para que puedan conocerme mejor'),
               ],
             ),
           ),
